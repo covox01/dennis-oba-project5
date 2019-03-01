@@ -1,26 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import firebase from './firebase.js';
 import './App.css';
+import './styles/mainApp.css';
+import CreateProject from './CreateProject.js';
+import TaskMaster from './TaskMaster.js';
+import Hub from './Hub.js';
+import Date from './Date.js'
 
+
+
+// Component starts
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      projectName: '',
+      userName: '',
+      description: '',
+      tasks: []
+    }
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const dbRef=firebase.database().ref()
+    console.log(dbRef)
+  }
+
+  componentDidMount(){
+    console.log('component mounted');
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="App superContainer">
+        <div className="appContainer">
+          <CreateProject />
+          <Hub />
+        </div>
       </div>
+     
+
+
     );
   }
 }
