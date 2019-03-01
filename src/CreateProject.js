@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import './styles/createProject.css';
+import './styles/mainApp.css';
 // import './styles/fonts.css';
 
 
@@ -35,12 +36,19 @@ class CreateProject extends Component {
                         id="userNameInput"
                         className="userNameInput" name="userNameInput"
                         placeholder="Enter Contributer" 
-                         />
+                        required/>
                 <div className="line decor2"></div>
                 {/* Input Description */}
-                {/* <label htmlFor="">Project Description</label> */}
-                <textarea name="projectDescription" id="" cols="30" rows="10" placeholder="Description"></textarea>
-                <button ></button>
+                <div className="labelFlex">
+                    <label class="projectDescriptionLabel" htmlFor="">Description:</label>
+                </div>
+                <div className="line decor3"></div>
+                <textarea   class="projectDescription"
+                            name="projectDescription" 
+                            id="projectDescription" cols="30" rows="5" 
+                            placeholder="Enter Project Description"></textarea>
+                <button></button>
+                <div className="line decor4"></div>
             </form>
         )
     }

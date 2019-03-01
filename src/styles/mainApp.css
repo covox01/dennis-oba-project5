@@ -21,5 +21,10 @@ input {
     background: none;
 }
 
+textarea {
+    border: none;
+    resize: none;
+}
+
 
 

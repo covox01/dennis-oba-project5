@@ -6,62 +6,113 @@ form {
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: 1fr;
     background: #242935;
+    border: 1px solid red;
 } 
 
-input {
+input, textarea, .projectDescriptionLabel {
     width: 73%;
     margin: 0 auto;
     color: white;
     background: none;
     font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
 }
 ;
 input::placeholder {
     color: white;
     opacity: 1;
-    font-size: 1rem;
-}
-.projectName {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    font-size: 2.5rem;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
+    font-size: .9rem;
 }
 
-.projectName::placeholder {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-}
-.line {
-    height: 1px;
-    width: 80%;
-    margin: 0 auto;
-    background: grey;
-}
-.decor1 {
-    grid-row: 3 / 3;
-    grid-column: 1 / 2;
-}
+/* Project Name Style */
+    .projectName {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+    }
+    .projectName::placeholder {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
 
-.userNameInput {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-    font-size: 1rem;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-}
-.decor2 {
-    grid-row: 4 / 4;
-    grid-column: 1 / 2;
-}
+/* Line Style */
+    .line {
+        height: .5px;
+        width: 80%;
+        margin: 0 auto;
+        background: #D1D1D1;
+        opacity: .3;
+    }
+    .decor1 {
+        grid-row: 3 / 3;
+        grid-column: 1 / 2;
+    }
+    .decor2 {
+        grid-row: 4 / 4;
+        grid-column: 1 / 2;
+    }
+    .decor3 {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+    .decor4 {
+        grid-row: 6 / 7;
+        grid-column: 1 / 2;
+    }
 
-textarea {
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
-    color: white;
-    background: none;
-}
+/* User Input Style */
+    .userNameInput {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        font-size: 1rem;
+        color: white;
+        /* opacity: .5; */
+    }
+    .userNameInput::placeholder {
+        font-style: italic;
+        opacity: .5;
+    }
+
+/* Label Description Style */
+    .labelFlex {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        display: flex;
+        align-items: center;
+    }
+    .projectDescriptionLabel {
+        background: none;
+        font-size: .9rem;
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+/* Project Description Style */
+    .projectDescription {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+        color: white;
+        background: none;
+        justify-content: center;
+        align-self: center;
+        /* border: 1px solid red; */
+        padding: 15px 0;
+        font-size: .8rem;
+        line-height: 1.5;
+        letter-spacing: .4px;
+        /* opacity: .5; */
+
+    }
+    .projectDescription::placeholder {
+        font-size: .8rem;
+        opacity: .5;
+        position: absolute;
+        font-style: italic;
+        
+    }
 
 
 
