@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles/taskMaster.css';
 
 class TaskMaster extends Component {
     constructor(){
@@ -10,10 +11,23 @@ class TaskMaster extends Component {
 
     render() {
         return (
-            <div>
+            <div className="tasker">
+                <ul className="taskLog">
+                    <li className="taskItem">
+                        <span className="task">Get project to push into firebase</span>
+                    </li>
+                    <li className="taskItem">
+                        <span className="task">Get project to push into firebase</span>
+                    </li>     
+                </ul>
+                <form action="submit" className="taskInput">
+                    <input  type="text" 
+                            className="taskInputItem"
+                            placeholder="input project task" />
+                </form>  
             </div>
         )
     }
 }
 
-export default TaskMaster
+export default TaskMaster;

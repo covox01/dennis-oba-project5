@@ -1,0 +1,63 @@
+.tasker {
+    grid-column: 3 / 5;
+    grid-row: 2 / 7;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+    border-top: .3px solid rgb(110, 107, 107);
+}
+
+.taskLog {
+    grid-row: 1 / 5;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    border-top: .3px solid rgb(110, 107, 107);
+}
+
+.taskItem {
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    background: #3B455C;
+    border-bottom: .3px solid rgb(110, 107, 107);
+}
+
+.taskItem span {
+    color: rgb(216, 216, 216);
+    font-family: 'Roboto Condensed', sans-serif;
+    word-spacing: 1px;
+    /* font-weight: 500; */
+    /* letter-spacing: .3px; */
+    /* font-size: 1rem; */
+}
+
+.taskInput{
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(110, 107, 107);
+    background: #3B455C;  
+} 
+
+.taskInputItem {
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    color: #3B455C;
+    /* font-family */
+    font-size: .8rem;
+    padding: 5px;
+    width: 50%;
+}
+.taskInputItem::placeholder {
+    color: rgb(110, 107, 107);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: .8rem;
+
+}
+
+

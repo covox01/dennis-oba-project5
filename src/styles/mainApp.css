@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Roboto:400,500');
 
 .superContainer {
     width: 70%;
-    max-width: 750px;
+    max-width: 720px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .appContainer {
     width: 100%;
-    height: 760px;
+    height: 720px;
     display: grid;
     grid-template-rows: repeat(7, 1fr);
     grid-template-columns: repeat(4, 1fr);
+    background: #3B455C;
+    border-radius:  15px;
 }
 
 input {
@@ -25,6 +28,51 @@ textarea {
     border: none;
     resize: none;
 }
+
+ul {
+    list-style: none;
+}
+
+/* .title {
+    grid-row: 1 / 2;
+    grid-column: 3 / 5;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: .9rem;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    background: #3B455C;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0 15px 0 0;
+} */
+
+/* h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1rem;
+    padding-left: 10%;
+    margin-bottom: 6%;
+    background: #3B455C;
+    letter-spacing: .5px;
+    font-weight: 500;
+    position: relative;
+} */
+/* 
+
+h1::after {
+    content: '';
+    height: 4px;
+    width: 70%;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background: rgb(255, 255, 255);
+} */
 
 
 

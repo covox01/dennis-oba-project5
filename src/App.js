@@ -5,7 +5,7 @@ import './styles/mainApp.css';
 import CreateProject from './CreateProject.js';
 import TaskMaster from './TaskMaster.js';
 import Hub from './Hub.js';
-import Date from './Date.js'
+import DateTime from './DateTime.js'
 
 
 
@@ -35,13 +35,12 @@ class App extends Component {
     return (
       <div className="App superContainer">
         <div className="appContainer">
+          <DateTime />
           <CreateProject />
           <Hub />
+          <TaskMaster />
         </div>
       </div>
-     
-
-
     );
   }
 }
