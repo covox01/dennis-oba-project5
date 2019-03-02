@@ -53,19 +53,18 @@ input::placeholder {
     .input1 {
         grid-row: 3 / 4;
         grid-column: 1 / 2;   
-        display: flex;
+        /* display: flex;
         font-family: 'Roboto', sans-serif;
         align-items: center;
         color: white;
         width: 100%;
-        justify-content: center;
+        justify-content: center; */
     }
-
     .input1 label {
         font-size: .9rem;
     }
     .projectName {
-        width: 57%;
+        width: 100%;
         margin: 0;
         font-size: .9rem;
         font-family: 'Roboto', sans-serif;
@@ -104,18 +103,20 @@ input::placeholder {
         grid-column: 1 / 2;
     }
 
+    .inputStyle {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        align-items: center;
+        color: white;
+        width: 77%;
+        justify-content: center;
+        margin: 0 auto;
+    }
 /* User Input Style */
 
     .input2 {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        display: flex;
-        font-family: 'Roboto', sans-serif;
-        align-items: center;
-        color: white;
-        width: 75%;
-        justify-content: center;
-        margin: 0 auto;
     }
 
     .input2 label {
@@ -135,21 +136,13 @@ input::placeholder {
     }
 
 /* Label Description Style */
-    .labelFlex {
+    .input3 {
         grid-row: 5 / 6;
         grid-column: 1 / 2;
-        display: flex;
-        align-items: center;
-        width: 50%;
-        justify-content: center;
-        margin: 0 auto;
     }
-    .projectDescriptionLabel {
+    .input3 label {
         background: none;
         font-size: .9rem;
-        display: block;
-        margin: 0 auto;
-        text-align: left;
     }
 
 /* Project Description Style */
@@ -161,6 +154,8 @@ input::placeholder {
         font-size: .8rem;
         line-height: 1.5;
         letter-spacing: .4px;
+        margin-left: 5%;
+        /* width: 100%; */
     }
     .projectDescription::placeholder {
         font-size: .9rem;
@@ -169,6 +164,10 @@ input::placeholder {
         font-style: italic;
         
     }
+
+.projectForm button {
+    height: 
+}
 
 
 

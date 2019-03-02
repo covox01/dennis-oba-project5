@@ -25,7 +25,7 @@ class CreateProject extends Component {
                 <div className="title">
                     <h1>TaskMaster</h1>
                 </div>
-                <div className="input1">
+                <div className="input1 inputStyle">
                     <label htmlFor="projectName">Project:</label>
                     <input  type="text" 
                             id="projectName" 
@@ -36,7 +36,7 @@ class CreateProject extends Component {
                 </div>
                     <div className="line decor1"></div>
                 {/* Input User Name */}
-                <div className="input2">
+                <div className="input2 inputStyle">
                     <label htmlFor="userNameInput">Contributor:</label>
                     <input  type="text" 
                             id="userNameInput"
@@ -46,22 +46,19 @@ class CreateProject extends Component {
                 </div>
                 <div className="line decor2"></div>
                 {/* Input Description */}
-                <div className="labelFlex">
-                    <label class="projectDescriptionLabel" htmlFor="">Description:</label>
+                <div className="input3 inputStyle">
+                    <label htmlFor="">Description:</label>
                     <input type="text"
                         class="projectDescription"
                         name="projectDescription"
                         id="projectDescription" cols="30" rows="5"
-                        placeholder="Enter Project Description"
+                        placeholder=""
                         required />
                 </div>
                 <div className="line decor3"> </div>
-                    
-               
-
                 <button></button>
-                <div className="line decor4"></div>
             </form>
+            
         )
     }
 

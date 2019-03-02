@@ -14,10 +14,10 @@ class TaskMaster extends Component {
             <div className="tasker">
                 <ul className="taskLog">
                     <li className="taskItem">
-                        <span className="task">Get project to push into firebase</span>
+                        <span>Get project to push into firebase</span>
                     </li>
                     <li className="taskItem">
-                        <span className="task">Get project to push into firebase</span>
+                        <span>Get project to push into firebase</span>
                     </li>     
                 </ul>
                 <form action="submit" className="taskInput">
