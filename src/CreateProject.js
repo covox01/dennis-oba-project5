@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
+import firebase from './firebase.js';
 import './styles/createProject.css';
 import './styles/mainApp.css';
 // import './styles/fonts.css';
@@ -11,19 +11,55 @@ class CreateProject extends Component {
         this.state = {
             projectName: '',
             userName: '',
-            description: ''
+            description: '',
+            tasks: []
         }
     }
 
-    handleSubmit = (e) => {
-        console.log(e)
+    
+
+    handleChange = (e) => {
+        
+        this.setState({
+            projects: {
+                [e.target.name]: e.target.value
+            }
+        })
     }
+    //Triggers the submit button
+    handleSubmit = (e) => {
+        // console.log(this.state.userName);
+        e.preventDefault();
+        const dbRef = firebase.database().ref()
+        const userProjects = firebase.database().ref('projects');
+        dbRef.push(this.state.projects.projectName);
+        dbRef.push(this.state.projects.userName);
+        dbRef.push(this.state.projects.description);
+    }
+
+    componentDidMount(){
+        const dbRef = firebase.database().ref();
+        console.log("component did mount")
+        dbRef.on('value', res => {
+            // console.log(res.val());
+            const newState = [];
+            const data = res.val();
+            for (let key in data) {
+                newState.push({
+                    key: key,
+                    tasks: data[key]
+                })
+            }
+        })
+    }
+
     render(){
         return (
-            <form action="submit" className="projectForm">
+            <form action="submit" className="projectForm" onSubmit={this.handleSubmit}>
                 {/* Input Project Name */}
                 <div className="title">
                     <h1>TaskMaster</h1>
+                    <button className="create">create</button>
                 </div>
                 <div className="input1 inputStyle">
                     <label htmlFor="projectName">Project:</label>
@@ -31,7 +67,8 @@ class CreateProject extends Component {
                             id="projectName" 
                             className="projectName"
                             name="projectName"
-                            placeholder=""
+                            value={this.state.projects.projectName}
+                            onChange={this.handleChange}
                             required/>
                 </div>
                     <div className="line decor1"></div>
@@ -40,24 +77,26 @@ class CreateProject extends Component {
                     <label htmlFor="userNameInput">Contributor:</label>
                     <input  type="text" 
                             id="userNameInput"
-                            className="userNameInput" name="userNameInput"
-                            placeholder="" 
+                            className="userNameInput" name="userName"
+                            value={this.state.projects.userName}
+                            onChange={this.handleChange}
                             required/>
                 </div>
                 <div className="line decor2"></div>
                 {/* Input Description */}
                 <div className="input3 inputStyle">
-                    <label htmlFor="">Description:</label>
+                    <label htmlFor="projectDescription">Description:</label>
                     <input type="text"
-                        class="projectDescription"
-                        name="projectDescription"
-                        id="projectDescription" cols="30" rows="5"
-                        placeholder=""
-                        required />
+                        className="projectDescription"
+                        name="description"
+                        id="projectDescription"
+                        value={this.state.projects.description} 
+                        onChange={this.handleChange} 
+                        required/>
                 </div>
                 <div className="line decor3"> </div>
-                <button></button>
             </form>
+
             
         )
     }
