@@ -23,12 +23,20 @@ form {
 
 }
 .create {
-    height: 25%;
+    height: 40%;
     width: 20%;
+    color: #3B455C;
     background: white;
     border-radius: 10px;
-    font-size: .5rem;
+    font-size: .8rem;
+    transition: all .5s ease;
 }
+
+.create:hover {
+    color: white;
+}
+
+
 
 h1 {
     font-family: 'Roboto', sans-serif;
@@ -174,9 +182,9 @@ input::placeholder {
         
     }
 
-.projectForm button {
-    height: 
-}
+
+
+
 
 
 

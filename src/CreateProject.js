@@ -16,14 +16,9 @@ class CreateProject extends Component {
         }
     }
 
-    
-
     handleChange = (e) => {
-        
         this.setState({
-            projects: {
-                [e.target.name]: e.target.value
-            }
+            [e.target.name]: e.target.value
         })
     }
     //Triggers the submit button
@@ -31,25 +26,28 @@ class CreateProject extends Component {
         // console.log(this.state.userName);
         e.preventDefault();
         const dbRef = firebase.database().ref()
-        const userProjects = firebase.database().ref('projects');
-        dbRef.push(this.state.projects.projectName);
-        dbRef.push(this.state.projects.userName);
-        dbRef.push(this.state.projects.description);
+        const userProjects = firebase.database().ref('User Projects');
+        userProjects.push(this.state);
+        console.log('submitted');
+        this.setState({
+            projectName: '',
+            userName: '',
+            description: '',
+        })
     }
 
     componentDidMount(){
         const dbRef = firebase.database().ref();
         console.log("component did mount")
         dbRef.on('value', res => {
-            // console.log(res.val());
             const newState = [];
             const data = res.val();
-            for (let key in data) {
-                newState.push({
-                    key: key,
-                    tasks: data[key]
-                })
-            }
+            // for (let key in data) {
+            //     newState.push({
+            //         key: key,
+            //         tasks: data[key]
+            //     })
+            // }
         })
     }
 
@@ -67,7 +65,7 @@ class CreateProject extends Component {
                             id="projectName" 
                             className="projectName"
                             name="projectName"
-                            value={this.state.projects.projectName}
+                            value={this.state.projectName}
                             onChange={this.handleChange}
                             required/>
                 </div>
@@ -78,7 +76,7 @@ class CreateProject extends Component {
                     <input  type="text" 
                             id="userNameInput"
                             className="userNameInput" name="userName"
-                            value={this.state.projects.userName}
+                            value={this.state.userName}
                             onChange={this.handleChange}
                             required/>
                 </div>
@@ -90,14 +88,12 @@ class CreateProject extends Component {
                         className="projectDescription"
                         name="description"
                         id="projectDescription"
-                        value={this.state.projects.description} 
+                        value={this.state.description} 
                         onChange={this.handleChange} 
                         required/>
                 </div>
                 <div className="line decor3"> </div>
             </form>
-
-            
         )
     }
 
