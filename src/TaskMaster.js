@@ -38,34 +38,7 @@ class TaskMaster extends Component {
                 <ul className="taskLog">
                     <li className="taskItem">
                         <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li> 
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li> 
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>
-                    <li className="taskItem">
-                        <span>Get project to push into firebase</span>
-                    </li>         
+                    </li>    
                 </ul>
                 <form action="submit" className="taskInput">
                     <input  type="text" 

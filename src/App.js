@@ -13,6 +13,12 @@ import './styles/mainApp.css';
 
 // Component starts
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      
+    }
+  }
   render() {
     return (
       <div className="App superContainer">
