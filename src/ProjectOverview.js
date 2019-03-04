@@ -26,9 +26,6 @@ class ProjectOverview extends Component {
                 </div>
                 
                 <div className="line d4"></div>
-                {/* <div className="completedTaskContainer">
-                    <h2 className="completedTasks">Completed</h2>
-                </div> */}
             </section>
         )
     }

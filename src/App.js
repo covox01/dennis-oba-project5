@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CreateProject from './CreateProject.js';
-import ProjectOverview from './ProjectOverview';
 import TaskMaster from './TaskMaster.js';
 import Hub from './Hub.js';
 import DateTime from './DateTime.js'
@@ -21,7 +20,6 @@ class App extends Component {
           <DateTime />
           <CreateProject />
           <TaskMaster />
-          {/* <ProjectOverview /> */}
           <Hub />
         </div>
       </div>
