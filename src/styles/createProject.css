@@ -75,8 +75,10 @@ input::placeholder {
         grid-row: 3 / 4;
         grid-column: 1 / 2;   
     }
-    .input1 label {
-        font-size: .9rem;
+    .input1 label,
+    .input3 label,
+    .input2 label {
+        font-size: 1rem;
     }
     .projectName {
         width: 100%;
@@ -129,18 +131,12 @@ input::placeholder {
         margin: 0 auto;
     }
 /* User Input Style */
-
     .input2 {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
     }
 
-    .input2 label {
-        font-size: .9rem;
-    }
     .userNameInput {
-        /* grid-row: 4 / 5;
-        grid-column: 1 / 2; */
         font-size: .8rem;
         color: white;
         margin-left: 5%;
@@ -155,10 +151,6 @@ input::placeholder {
     .input3 {
         grid-row: 5 / 6;
         grid-column: 1 / 2;
-    }
-    .input3 label {
-        background: none;
-        font-size: .9rem;
     }
 
 /* Project Description Style */

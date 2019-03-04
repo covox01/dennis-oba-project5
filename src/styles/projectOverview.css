@@ -4,7 +4,7 @@
     background: #242935;
     z-index: 20;
     display: grid;
-    /* display: none; */
+    display: none;
     grid-template-rows: 1.7fr repeat(8, 1fr);
     grid-template-columns: 1fr;
 }

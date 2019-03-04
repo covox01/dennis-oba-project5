@@ -70,7 +70,6 @@ class TaskMaster extends Component {
                                             onClick={() => {this.completeTask(picked.key)}}>
                                             <span>{picked.task}</span>
                                         </li>
-                                        
                             })
                         }
                         

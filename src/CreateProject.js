@@ -26,7 +26,9 @@ class CreateProject extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const userProjects = firebase.database().ref('User Projects');
+        // const userTasks = firebase.database().ref('Tasks')
         userProjects.push(this.state);
+        // userTasks.push(this.state);
         this.setState({
             projectName: '',
             userName: '',
@@ -34,14 +36,12 @@ class CreateProject extends Component {
         })
     }
 
-
     render(){
         return (
             <Fragment>
-                <ProjectOverview    projextName={this.state.projectName} 
+                <ProjectOverview    projectName={this.state.projectName} 
                                     userName={this.state.userName}
                                     description={this.state.description}
-                                    
                                     />
                 <form action="submit" className="projectForm" onSubmit={this.handleSubmit}>
                     <div className="title">

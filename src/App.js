@@ -21,7 +21,7 @@ class App extends Component {
           <DateTime />
           <CreateProject />
           <TaskMaster />
-          <ProjectOverview />
+          {/* <ProjectOverview /> */}
           <Hub />
         </div>
       </div>

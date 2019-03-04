@@ -4,8 +4,8 @@ import './styles/createProject.css';
 import './styles/mainApp.css';
 
 
-class ProjectOverview extends Component {
 
+class ProjectOverview extends Component {
     render(){
         return (
             <section className="projectOverview">
