@@ -5,7 +5,7 @@ class Hub extends Component {
     render() {
         return (
             <div className="hub">
-                <button className="home">
+                {/* <button className="home">
                     <div className="icon1"></div>
                 </button>
                 <button className="new">
@@ -13,7 +13,7 @@ class Hub extends Component {
                 </button>
                 <button className="clock">
                     <div className="icon3"></div>
-                </button>
+                </button> */}
             </div>
         )
     }

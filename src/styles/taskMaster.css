@@ -1,3 +1,5 @@
+
+
 .tasker {
     grid-column: 3 / 5;
     grid-row: 2 / 7;
@@ -6,15 +8,6 @@
     grid-template-columns: 1fr;
     border-top: 2px solid #4b556d;
 }
-/* 
-.taskList {
-    grid-row: 1 / 2;
-    grid-column: 3 / 5;
-    background: #434c63;
-    border-radius: 0 15px 0 0;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
 
 .taskList h2 {
     font-family: 'Roboto', sans-serif;
@@ -38,6 +31,8 @@
     background: rgb(49, 57, 77);
     border-bottom: 2px solid #4b556d;
     transition: background .5s ease;
+    justify-content: space-between;
+    display: flex;
 }
 .taskItem:hover {
     cursor: pointer;
@@ -57,7 +52,6 @@
     grid-column: 1 / 2;
     display: flex;
     align-items: center;
-    /* border: 1px solid rgb(110, 107, 107); */
     border-top: 2px solid #2c3241;
     background: #2c3241;  
 } 
@@ -79,5 +73,6 @@
     text-align: center;
     font-size: .8rem;
 }
+
 
 

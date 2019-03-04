@@ -3,8 +3,6 @@ import './styles/dateTime.css';
 import './styles/mainApp.css';
 
 
-
-
 class DateTime extends Component {
     constructor() {
         super();
@@ -12,10 +10,7 @@ class DateTime extends Component {
             date: '',
             time: ''
         }
-
     }
-
-
 
     componentDidMount = () => {
         // This get's today's date
@@ -34,8 +29,6 @@ class DateTime extends Component {
             date: `${thisMonth} ${day}, ${year}`,
             time: `${thisHour}:${minutes}:${amPm}`
         })
-
-        //    console.log(`${thisMonth} ${day}, ${year}`)
     }
 
     render() {

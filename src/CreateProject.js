@@ -15,7 +15,7 @@ class CreateProject extends Component {
             task: []
         }
     }
-
+    // This gives value to the state from the targetted input
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -38,7 +38,11 @@ class CreateProject extends Component {
     render(){
         return (
             <Fragment>
-                <ProjectOverview projTitle={this.state.projectName} />
+                <ProjectOverview    projextName={this.state.projectName} 
+                                    userName={this.state.userName}
+                                    description={this.state.description}
+                                    
+                                    />
                 <form action="submit" className="projectForm" onSubmit={this.handleSubmit}>
                     <div className="title">
                         <h1>TaskMaster</h1>
@@ -59,7 +63,7 @@ class CreateProject extends Component {
                     <div className="input2 inputStyle">
                         <label htmlFor="userNameInput">Contributor:</label>
                         <input  type="text" 
-                                // id="userNameInput"
+                                id="userNameInput"
                                 className="userNameInput" 
                                 name="userName"
                                 value={this.state.userName}

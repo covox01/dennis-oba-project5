@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import firebase from './firebase.js';
 import './styles/taskMaster.css';
+import './styles/projectOverview.css';
+import './styles/createProject.css';
+import './styles/mainApp.css';
+import ProjectOverview from './ProjectOverview.js';
 
 class TaskMaster extends Component {
     constructor(props){
@@ -41,25 +45,32 @@ class TaskMaster extends Component {
             }
             this.setState({
                 task: newState,
-
             })
             console.log(newState);
         })
     }
 
+    completeTask = (task) => {
+        console.log(task);
+        const dbRef = firebase.database().ref(task);
+        console.log(dbRef);
+        dbRef.remove();
+    }
+
     render() {
         return (
             <Fragment>
-                {/* <div className="taskList">
-                    <h2>Task List</h2>
-                </div> */}
+                <ProjectOverview />
                 <div className="tasker">
                     <ul className="taskLog">
                         {
                             this.state.task.map((picked) => {
-                                return <li key={picked.key} className="taskItem">
+                                return <li  key={picked.key} 
+                                            className="taskItem"
+                                            onClick={() => {this.completeTask(picked.key)}}>
                                             <span>{picked.task}</span>
                                         </li>
+                                        
                             })
                         }
                         

@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
-import firebase from './firebase.js';
 import './styles/projectOverview.css';
 import './styles/createProject.css';
 import './styles/mainApp.css';
 
-class ProjectOverview extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            projectName: '',
-        }
-    }
 
+class ProjectOverview extends Component {
 
     render(){
         return (
             <section className="projectOverview">
                 <div className="titleContainer">
-                    <h1 className="ovTitle">{this.props.projTitle} Project X</h1>
+                    <h1 className="ovTitle">{this.props.projectName} Project X</h1>
                 </div>
                 <div className="line d1"></div>
                 <div className="userNameContainer">
@@ -33,9 +26,9 @@ class ProjectOverview extends Component {
                 </div>
                 
                 <div className="line d4"></div>
-                <div className="completedTaskContainer">
+                {/* <div className="completedTaskContainer">
                     <h2 className="completedTasks">Completed</h2>
-                </div>
+                </div> */}
             </section>
         )
     }
