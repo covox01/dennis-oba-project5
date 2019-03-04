@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
 import firebase from './firebase.js';
-import CreateProject from './CreateProject.js'
 import './styles/projectOverview.css';
+import './styles/createProject.css';
+import './styles/mainApp.css';
 
 class ProjectOverview extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            projectName: '',
+        }
+    }
+
+
     render(){
         return (
             <section className="projectOverview">
                 <div className="titleContainer">
-                    <h1 className="ovTitle">Project Title</h1>
+                    <h1 className="ovTitle">{this.props.projTitle} Project X</h1>
                 </div>
+                <div className="line d1"></div>
                 <div className="userNameContainer">
-                    <h2 className="ovUserName">User: Name</h2>
+                    <h2 className="ovUserName">User: {this.props.userName}</h2>
                 </div>
+                <div className="line d2"></div>
+                <div className="descriptionTitle">
+                    <h2 className="ovDescription">Description:</h2>
+                </div>
+                <div className="line d3"></div>
                 <div className="descriptionContainer">
-                    <h2 className="ovDescription">Description goes here</h2>
+                    <p className="ovDescription">{this.props.description}</p>
                 </div>
+                
+                <div className="line d4"></div>
                 <div className="completedTaskContainer">
-                    <div className="completedTasks"></div>
+                    <h2 className="completedTasks">Completed</h2>
                 </div>
             </section>
         )
     }
 }
+
 
 export default ProjectOverview;

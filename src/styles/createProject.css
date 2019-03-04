@@ -39,7 +39,7 @@ form {
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     /* background: #3B455C; */
     letter-spacing: .5px;
